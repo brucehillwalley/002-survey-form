@@ -24,3 +24,61 @@ body {
 .span1 {
   color: red;
 }
+
+#description {
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#survey-form {
+ 
+  width: 250px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding-top: 5px;
+  
+  margin: auto;
+}
+
+.box{
+  margin-top: 10px ;
+  margin-left: 20px;
+
+}
+
+.content{
+  width: 200px;
+  height: 20px;
+  padding: 5px;
+  margin-top: 8px;
+  
+
+}
+#content-type{
+  box-sizing: content-box;
+  resize: none;
+}
+#submit{
+  height: 23px;
+  width: 80px;
+  background-color: #ff0000;
+  border-radius: 25px;
+  display: inline-block;
+  color: white;
+  margin-left: 60px;
+  margin-bottom: 8px;
+  border: none;
+  text-align: center;
+
+}
+
+#submit:hover {
+  background-color: white;
+  color: red;
+  cursor: pointer;
+}
+.textarea {
+  margin-top: 5px;
+}

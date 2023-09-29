@@ -9,6 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Netflix Survey Form</title>
   </head>
@@ -20,26 +26,120 @@
       </h3>
 
       <form id="survey-form" action="result.html">
-        <div class="box1">
+        <div class="box">
           <label for="name" id="name-label">Name</label
           ><input
             type="text"
             placeholder="Enter your name"
             name="name"
             id="name"
+            class="content"
+            required
           />
         </div>
-        <div class="box2">
-          <label for="">Age</label><input type="text" placeholder="Age" />
+        <div class="box">
+          <label for="age" id="age-label">Age</label
+          ><input
+            type="number"
+            placeholder="Age"
+            name="age"
+            id="age"
+            class="content"
+            required
+            min="18"
+            max="150"
+          />
         </div>
-        <div class="box3">
-          <label for="">Email</label
-          ><input type="text" placeholder="Enter your mail" />
+        <div class="box">
+          <label for="email" id="email-label">Email</label
+          ><input
+            type="email"
+            placeholder="Enter your mail"
+            name="email"
+            id="email"
+            class="content"
+            required
+          />
         </div>
-        <div class="box4">
-          <label for="">Content type</label
-          ><input type="text" placeholder="Series" />
+        <div class="box">
+          <label for="content-type" id="content-type-label">Content type</label>
+          <select name="content-type" id="content-type" class="content">
+            <option value="Movie">Movie</option>
+            <option value="Series" selected>Movie</option>
+          </select>
+          <div class="box">
+            <label id="checkbox">Movie Type</label>
+            <br />
+            <label for="comedy"
+              ><input
+                type="checkbox"
+                name="movie-type"
+                id="comedy"
+                value="comedy"
+                checked
+              />Comedy</label
+            ><br />
+            <label for="action"
+              ><input
+                type="checkbox"
+                name="movie-type"
+                id="action"
+                value="action"
+              />Action</label
+            ><br />
+            <label for="romance"
+              ><input
+                type="checkbox"
+                name="movie-type"
+                id="romance"
+                value="romance"
+              />Romance</label
+            >
+          </div>
+          <div class="box">
+            <label id="radiobtn"> Gender</label>
+            <br />
+            <label for="male"
+              ><input
+                type="radio"
+                name="male"
+                id="male"
+                value="male"
+                checked
+              />Male</label
+            ><br />
+            <label for="female"
+              ><input
+                type="radio"
+                name="female"
+                id="female"
+                value="male"
+              />Female</label
+            ><br />
+            <label for="others"
+              ><input
+                type="radio"
+                name="others"
+                id="others"
+                value="others"
+              />Others</label
+            >
+          </div>
+          <div class="box">
+            <label for="feedback">Feedback</label><br />
+            <textarea
+              name="feedback"
+              id="feedback"
+              cols="25"
+              rows="5"
+              placeholder="Any comment"
+              style="resize: none;"
+              class="textarea"
+            ></textarea>
+          </div>
+        
         </div>
+        <input type="submit" id="submit" value="Send">
       </form>
     </div>
   </body>
